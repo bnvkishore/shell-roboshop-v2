@@ -23,6 +23,9 @@ cp $SCRIPT_DIR/nginx.conf /etc/nginx/nginx.conf
 VALIDATE $?  "Copied roboshop nginx conf"
 
 systemctl enable nginx &>>$LOGS_FILE
-app_restart
+systemctl restart nginx 
+VALIDATE $? "Enable and restart nginx"
+
 print_total_time
+
 
