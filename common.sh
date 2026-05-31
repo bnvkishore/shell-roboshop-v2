@@ -6,6 +6,7 @@ sudo mkdir -p $LOGS_DIR
 sudo chown -R ec2-user:ec2-user $LOGS_DIR
 sudo chmod -R 755 $LOGS_DIR
 LOGS_FILE="$LOGS_DIR/$0.log"
+SCRIPT_DIR=$PWD
 
 USERID=$(id -u)
 R="\e[31m"
